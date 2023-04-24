@@ -10,7 +10,7 @@ int _putchar(char c);
 int _strlen(char *s);
 int _strcmp(char *s1, char *s2);
 int _printf(const char *format, ...);
-void print_char(char c);
-void print_string(char *s);
+int print_char(char c);
+int print_string(char *s);
 
 #endif /*MAIN_H*/

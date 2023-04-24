@@ -4,24 +4,33 @@
  * print_char- prints a character
  *
  * @c: the character
+ *
+ * Return: number of printed characters
  */
 
-void print_char(char c)
+int print_char(char c)
 {
 	_putchar(c);
+	return (1);
 }
 
 /**
  * print_string- prints a string
  *
  * @s: the string
+ *
+ * Return: Number of printed characters
  */
 
-void print_string(char *s)
+int print_string(char *s)
 {
+	int count = 0;
+
 	while (*s)
 	{
 		_putchar(*s);
 		s++;
+		count++;
 	}
+	return (count);
 }

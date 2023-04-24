@@ -1,38 +1,37 @@
 #include "main.h"
 
+/**
+ * _printf- imitates printf function
+ *
+ * @format: data format
+ *
+ * Return: number of characters printed
+ */
+
 int _printf(const char *format, ...)
 {
-	int count = 0;
+	int count = 0, num, size;
 	char *str;
 	va_list args;
-	va_start(args, format);
 
+	va_start(args, format);
 	while (*format)
 	{
 		if (*format == '%')
 		{
 			format++;
 			if (*format == 'c')
-			{
-				print_char(va_arg(args, int));
-				count++;
-			}
+				count = print_char(va_arg(args, int));
 			else if (*format == 's')
-			{
-				str = va_arg(args, char *);
-				print_string(str);
-				count += _strlen(str);
-			}
+				count = print_string(va_arg(args, char *));
 		}
 		else
 		{
 			_putchar(*format);
 			count++;
 		}
-
 		format++;
 	}
-
 	va_end(args);
 	return (count);
 }
