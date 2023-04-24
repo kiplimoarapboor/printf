@@ -1,2 +1,5 @@
-# printf
-An implementation for C's printf
+![img](https://assets.imaginablefutures.com/media/images/ALX_Logo.max-200x150.png)
+
+## About
+
+An implementation of C's printf
