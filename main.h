@@ -6,7 +6,17 @@
 #include <unistd.h>
 #include <stdlib.h>
 
-
+/**
+ * struct func- struct of functions
+ *
+ * @spec: the specifier
+ * @f: function to execute
+ */
+typedef struct func
+{
+	char spec;
+	int (*f);
+}print;
 
 int _putchar(char c);
 int _printf(const char *format, ...);
