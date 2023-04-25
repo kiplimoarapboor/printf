@@ -26,7 +26,6 @@ int _printf(const char *format, ...)
 			else if (*format == '%')
 			{
 				count += print_percent();
-				format++;
 			}
 		}
 		else
