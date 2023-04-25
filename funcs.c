@@ -34,3 +34,9 @@ int print_string(char *s)
 	}
 	return (count);
 }
+
+int print_percent(void)
+{
+	_putchar('%');
+	return (1);
+}

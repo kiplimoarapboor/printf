@@ -23,6 +23,11 @@ int _printf(const char *format, ...)
 				count += print_char(va_arg(args, int));
 			else if (*format == 's')
 				count += print_string(va_arg(args, char *));
+			else if (*format == '%')
+			{
+				count += print_percent();
+				format++;
+			}
 		}
 		else
 		{
