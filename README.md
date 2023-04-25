@@ -3,3 +3,5 @@
 ## About
 
 An implementation of C's printf
+
+#### This code is not 100% functional
