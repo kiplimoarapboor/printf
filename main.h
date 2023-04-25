@@ -14,5 +14,4 @@ int print_string(char *s);
 int print_percent(void);
 int print_int(int a);
 
-
 #endif /*MAIN_H*/
