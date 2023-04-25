@@ -20,9 +20,9 @@ int _printf(const char *format, ...)
 		{
 			format++;
 			if (*format == 'c')
-				count = print_char(va_arg(args, int));
+				count += print_char(va_arg(args, int));
 			else if (*format == 's')
-				count = print_string(va_arg(args, char *));
+				count += print_string(va_arg(args, char *));
 		}
 		else
 		{
