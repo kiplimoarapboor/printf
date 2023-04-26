@@ -16,8 +16,6 @@ int _printf(const char *format, ...)
 	va_start(args, format);
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
-	if (format[0] == '%' && format[1] == '\n')
-		return (-1);
 	while (*format)
 	{
 		if (*format == '%')
@@ -31,6 +29,8 @@ int _printf(const char *format, ...)
 				count += print_int(va_arg(args, int));
 			else if (*format == '%')
 				count += print_percent();
+			else
+				return (-1);
 		}
 		else
 		{
